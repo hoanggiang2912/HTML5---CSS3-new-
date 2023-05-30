@@ -34,6 +34,7 @@
     position: relative;
 }
 .form__group label {
+    min-width: 200px;
     position: absolute;
     top: 30px;
     transform: translateY(-50%) translateX(-329px);
@@ -92,6 +93,10 @@
     padding: 16px;
     margin: 0;
     text-align: center;
+    cursor: pointer;
+}
+.log-in-form>.form__btn:active {
+    transform: scale(.98);
 }
 .forgot {
     font-weight: 600;

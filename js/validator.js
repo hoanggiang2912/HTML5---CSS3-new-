@@ -1,16 +1,13 @@
 function Validator (options) {
     const validator = (inputEle , messageEle , rule) => {
-        inputEle.onblur = () => {
             const errorMessage = rule.test(inputEle.value)
             if (errorMessage) {
                 messageEle.innerText = errorMessage
                 inputEle.parentElement.classList.add('invalid')
+            } else {
+                inputEle.parentElement.classList.remove('invalid')
+                messageEle.innerText = ''
             }
-        }
-        inputEle.oninput = () => {
-            inputEle.parentElement.classList.remove('invalid')
-            messageEle.innerText = ''
-        }
     }
     const formEle = $(options.formSelector)
     if (formEle) {
@@ -18,7 +15,12 @@ function Validator (options) {
             const inputEle = $(rule.selector)
             const messageEle = inputEle.parentElement.querySelector(options.formMessage)
             if(inputEle) {
-                validator(inputEle , messageEle , rule)
+                inputEle.onblur = () => {
+                    validator(inputEle, messageEle, rule)
+                }
+                inputEle.oninput = () => {
+                    validator(inputEle, messageEle, rule)
+                }
             }
         });
     }

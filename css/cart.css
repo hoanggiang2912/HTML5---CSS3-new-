@@ -179,6 +179,8 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 12px 12px 0 0;
+    opacity: 0;
+    visibility: hidden;
 }
 .select__all {
     font-weight: 500;
@@ -206,10 +208,28 @@
     border-radius: 5px;
     transition: .2s linear;
 }
+.buy__now__btn:hover,
 .respon__summary__btn:hover {
     opacity: 0.8;
 }
+.buy__now__btn:active,
 .respon__summary__btn:active {
     opacity: 1;
     transform: scale(0.9);
+}
+.buy__now__btn {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    color: #FFFFFF;
+    background: var(--maincolor);
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    transition: .25s linear;
+    border-radius: 5px;
 }

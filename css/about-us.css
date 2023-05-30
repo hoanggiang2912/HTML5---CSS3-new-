@@ -1,0 +1,40 @@
+:root {
+    --maincolor: #00c2ff;
+    --backgroundcolor: linear-gradient(0deg, #0043a8 0%, #00114b 100%);
+    --overlaycolor: linear-gradient(270deg, #000000 0%, #d9d9d9 50.52%, #000000 100%);
+    --lightheaderitemhovercolor: #050728;
+    --hover: #ff9900;
+    --pricecolor: #4d4444;
+    --backgroundblur: #4282ff;
+    --banner-height: 65%;
+}
+.about-us__section .section-title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+.about-us__content h2{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+    color: var(--hover);
+    margin-bottom: 20px;
+}
+.about-us__content p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+.about-us__content {
+    width: 70%;
+    padding-inline: 20px;
+}
+.about-us__content__wrapper > * {
+    margin-bottom: 100px;
+}
