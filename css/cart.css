@@ -1,0 +1,215 @@
+:root {
+    --maincolor: #00c2ff;
+    --backgroundcolor: linear-gradient(0deg, #0043a8 0%, #00114b 100%);
+    --overlaycolor: linear-gradient(270deg, #000000 0%, #d9d9d9 50.52%, #000000 100%);
+    --lightheaderitemhovercolor: #050728;
+    --hover: #ff9900;
+    --pricecolor: #4d4444;
+    --backgroundblur: #4282ff;
+    --banner-height: 65%;
+}
+.cart__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: var(--maincolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 60px;
+}
+.cart__title h1{
+    position: relative;
+    width: fit-content;
+}
+.cart__title h1::before {
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--maincolor);
+}
+.cart__body {
+    display: grid;
+    grid-template-columns: 70% auto;
+    background: rgba(66, 130, 255, 0.4);
+    border-radius: 8px;
+    padding: 60px 35px;
+}
+.cart__nav{
+    display: grid;
+    grid-template-columns: 50% auto auto auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+}
+.cart__nav .nav__item{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+}
+.cart__nav__respon {
+    display: none;
+}
+.cart__product__wrapper {
+    margin-top: 30px;
+}
+.cart__product{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.cart__product__detail {
+    padding-right: 20px;
+    max-width: 270px;
+}
+.cart__product__banner {
+    width: 135px;
+    height: 180px;
+    flex-basis: 135px;
+}
+.cart__product__banner img {
+    width: 100%;
+    height: 100%;
+}
+.cart__product__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.cart__product__options {
+    display: flex;
+    justify-content: space-between;
+}
+.cart__product__options span {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF9900;
+}   
+.cart__product__price {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.cart__product__qty {
+    margin-inline: 30px
+}
+.del__btn {
+    color: rgba(66, 130, 255, 0.4);
+    opacity: 0.6;
+    transition: .25s linear;
+    cursor: pointer;
+}
+.del__btn:hover {
+    opacity: 1;
+}
+.del__btn:active {
+    opacity: 0.6;
+}
+.cart__summary {
+    padding: 60px ;
+}
+.summary__wrapper {
+    background: rgba(202, 202, 202, 0.3);
+    border: 1px solid rgba(202, 202, 202, 0.4);
+    border-radius: 8px;
+}
+.summary__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 20px;
+    color: #FFFFFF;
+    border-bottom: 1px solid white;
+}
+.summary__detail {
+    padding: 30px 0;
+    display:flex;
+    flex-direction:column;
+    gap: 30px;
+    padding: 20px;
+}
+.summary__detail span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+.summary__detail .flex {
+    justify-content: space-between;
+}
+.coupon {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--maincolor);
+    cursor: pointer;
+}
+.coupon > i {
+    transition: .25s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.coupon:hover > i {
+    transform: translateX(10px)
+}
+.summary__total span{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+.summary__total {
+    background: rgba(217, 217, 217, 0.4);
+    border-top: 1px solid #CACACA;
+    padding: 30px 20px;
+    justify-content: space-between;
+}
+.summary__respon {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 30px 20px;
+    background: white;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px 12px 0 0;
+}
+.select__all {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+.respon__summary__total h5{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
+.respon__summary__total h6 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #35635B;
+}
+.respon__summary__btn {
+    padding: 8px 18px;
+    background: #1F5694;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    border-radius: 5px;
+    transition: .2s linear;
+}
+.respon__summary__btn:hover {
+    opacity: 0.8;
+}
+.respon__summary__btn:active {
+    opacity: 1;
+    transform: scale(0.9);
+}
