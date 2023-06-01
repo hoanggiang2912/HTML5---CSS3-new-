@@ -19,7 +19,8 @@ function Validator (options) {
                     validator(inputEle, messageEle, rule)
                 }
                 inputEle.oninput = () => {
-                    validator(inputEle, messageEle, rule)
+                    inputEle.parentElement.classList.remove('invalid')
+                    messageEle.innerText = ''
                 }
             }
         });

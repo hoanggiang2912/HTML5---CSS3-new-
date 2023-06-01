@@ -389,9 +389,11 @@ body {
     flex-direction:column;
     margin-top: calc(65% + 40px);
     gap: 10px;
+    padding-inline: 20px;
     text-decoration: none;
 }   
 .product__name{
+    height: 42px;
     font-size: 14px;
     font-weight: 700;
     line-height: 21px;
