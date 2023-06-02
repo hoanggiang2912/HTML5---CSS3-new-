@@ -7,6 +7,7 @@
     <title>Trang chủ</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/log-in.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -1569,10 +1570,12 @@
                     </div>
                     <form action="" class="wait-list-form">
                         <div class="form-group">
-                            <input type="text" placeholder="Full name">
+                            <input type="text" placeholder="Full name" class="form__input fullname">
+                            <span class="form__message"></span>
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Email">
+                            <input type="text" placeholder="Email" class="form__input email">
+                            <span class="form__message"></span>
                         </div>
                         <a href="" class="form-btn btn">JOIN NOW</a>
                     </form>
@@ -1773,4 +1776,15 @@
     </div>
 </body>
 <script src="/js/main.js"></script>
+<script src="/js/validator.js"></script>
+<script>
+    Validator({
+        formSelector: '.wait-list-form',
+        formMessage: '.form__message',
+        rules: [
+            Validator.isRequired('.fullname'),
+            Validator.isEmail('.email')
+        ]
+    })
+</script>
 </html>

@@ -141,8 +141,8 @@ body {
     transform: scale(1);
 }
 .header-nav .subnav .nav__item > .nav__link {
-    font-size: 14;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 700;lo
     position: relative;
 }
 .header-nav .subnav ul .nav__link {

@@ -29,6 +29,8 @@ const galleryItems = $$('.gallery__item > img')
 // product options
 const optionBtns = $$('.product__option__item')
 const qtyOptions = $$('.product__qty__item')
+// product quantity
+const qtyInput = $$('.qty__input')
 
 
 for (let i = 0; i < renderActiveTabs.length ; i++) {
@@ -199,6 +201,44 @@ const app = {
         // product options
         this.productOptions(optionBtns, 'product__option__item')
         this.productOptions(qtyOptions, 'product__qty__item')
+        // quantity input 
+        qtyInput.forEach(input => {
+            const minusBtn = input.parentElement.querySelector('.minus__btn')
+            const plusBtn = input.parentElement.querySelector('.plus__btn')
+            minusBtn.onclick = () => {
+                input.value < 1 ? input.value = 0 : input.value--   
+            }
+            plusBtn.onclick = () => {
+                input.value++
+            }
+        });
+        // add to cart
+        const addBtn = $('.add__btn')
+        if(addBtn) {
+            addBtn.onclick = () => {
+                const productInfo = {
+                    productName: $('.product__name').innerText,
+                    productPrice: $('.product__price').innerText,
+                    productOption: $('.product__option__item.active').innerText,
+                    productSetQty: $('.product__qty__item.active').innerText,
+                    productQty: $('.qty__input').value,
+                    productImageSrc: galleryMain.src
+                }
+                localStorage.setItem('cartProduct' , JSON.stringify(productInfo))
+            }
+        }
+        // render cart
+        const cartProductWrapper = $('.cart__product__wrapper')
+        this.cartRender(cartProductWrapper)
+        // delete cart product
+        const delBtns = $$('.del__btn')
+        delBtns.forEach(btn => {
+            btn.onclick = () => {
+                btn.parentElement.remove()
+                localStorage.removeItem('cartProduct')
+                this.summaryHandler(btn.parentElement)
+            }
+        });
     },
     closeResponThings () {
         responNav.style.transform = 'translateX(100%)'
@@ -215,6 +255,50 @@ const app = {
                 $(`.${btnSeletor}.active`).classList.remove('active')
                 btn.classList.add('active')
             }
+        });
+    },
+    // cart render
+    cartRender (cartBody) {
+        if (cartBody) {
+            const cartProduct = JSON.parse(localStorage.getItem('cartProduct'))
+            if (cartProduct) {
+                const product = `
+                    <div class="cart__product">
+                        <div class="cart__product__banner"><img src="${cartProduct.productImageSrc}" alt=""></div>
+                        <div class="flex">
+                            <div class="cart__product__detail">
+                                <div class="cart__product__name">${cartProduct.productName}</div>
+                                <div class="cart__product__options">
+                                    <span>${cartProduct.productOption}</span>
+                                    <span>${cartProduct.productSetQty}</span>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="cart__product__price">${cartProduct.productPrice}</div>
+                                <div class="cart__product__qty product__qty__input">
+                                    <button class="minus__btn">-</button>
+                                    <input type="number" value="${cartProduct.productQty}" min="0" max="100" class="qty__input">
+                                    <button class="plus__btn">+</button>
+                                </div>
+                                <div class="cart__product__price cart__product__total">${cartProduct.productPrice}</div>
+                            </div>
+                        </div>
+                        <div class="del__btn"><i class="fa-solid fa-circle-xmark"></i></div>
+                    </div>
+                `
+                cartBody.innerHTML = product
+                this.summaryHandler(cartProduct)
+            }
+        }
+    },
+    // summary data handler
+    summaryHandler (cartProduct) {
+        // summary data handler
+        const summaryPrice = $('.summary__price')
+        const summaryTotal = $$('.summary__total__price')
+        summaryPrice.innerText = cartProduct.productPrice || 0
+        summaryTotal.forEach(total => {
+            total.innerText = cartProduct.productPrice || 0
         });
     },
     start () {
