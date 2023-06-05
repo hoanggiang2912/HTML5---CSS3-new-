@@ -364,3 +364,6 @@
 .customer__reviews .more-btn {
     margin: 0;
 }
+.add__btn:active {
+    transform: scale(.99);
+}
