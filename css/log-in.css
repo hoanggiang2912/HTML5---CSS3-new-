@@ -37,7 +37,7 @@
     min-width: 200px;
     position: absolute;
     top: 30px;
-    transform: translateY(-50%) translateX(-329px);
+    transform: translateY(-50%) translateX(-300px);
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -46,7 +46,7 @@
     pointer-events: none;
 }
 .form__group > input {
-    min-width: 350px;
+    min-width: 320px;
     background: rgba(66, 130, 255, 0.4);
     border-radius: 5px;
     border: 1px solid transparent;
@@ -135,6 +135,7 @@
     font-size: 14px;
     line-height: 24px;
     color: #FFFFFF;
+    text-align: center;
 }
 .log-in__body h5 a {
     color: var(--hover);

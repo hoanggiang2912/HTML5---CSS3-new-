@@ -37,7 +37,7 @@
         height: 320px !important;
         flex-basis: 220px !important;
     }
-    .product__detail {
+    .product .product__detail {
         margin-top: 95% !important;
     }
     .product__name {
@@ -186,19 +186,16 @@
 @media only screen and (min-width: 18.75em) and (max-width: 31.875em) {
     .product {
         width: 160px !important;
-        height: 280px !important;
-        flex-basis: 160px !important;
+        height: 300px !important;
+        flex-basis: 240px !important;
     }
-    .product__detail {
+    .product .product__detail {
         gap: 0 !important;
-        margin-top: 190px !important;
-    }
-    .product__detail .stars {
-        display: none;
+        margin-top: 200px !important;
     }
     .product__detail .product__name {
         font-size: 12px !important;
-        height: 63px;
+        height: 45px;
     }
     .product__detail .product__price {
         font-size: 10px !important;

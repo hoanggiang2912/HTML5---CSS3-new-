@@ -243,14 +243,21 @@ const app = {
             }
         }
         // delete cart product
+        const buyBtn = $('.buy__now__btn')
+        const summaryBuyBtn = $('.respon__summary__btn')
+        const cartProductItem = $('.cart__product')
         const delBtns = $$('.del__btn')
         delBtns.forEach(btn => {
             btn.onclick = () => {
                 btn.parentElement.remove()
                 localStorage.removeItem('cartProduct')
                 this.summaryHandler(btn.parentElement)
+
+                buyBtnHandler(cartProductItem, buyBtn, summaryBuyBtn)
             }
         });
+        // handle active/disable buy btn
+        buyBtnHandler(cartProductItem, buyBtn, summaryBuyBtn)
     },
     closeResponThings () {
         responNav.style.transform = 'translateX(100%)'
@@ -316,6 +323,16 @@ const app = {
         summaryTotal.forEach(ele => {
             ele.innerText = `$${price * input.value}`
         });
+    },
+    // handle active/disable buy btn
+    buyBtnHandler (cartProductItem , buyBtn , summaryBuyBtn) {
+        if (cartProductItem) {
+            buyBtn.classList.remove('disable')
+            summaryBuyBtn.classList.remove('disable')
+        } else {
+            buyBtn.classList.add('disable')
+            summaryBuyBtn.classList.add('disable')
+        }
     },
     start () {
         this.eventHandler()

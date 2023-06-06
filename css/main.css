@@ -8,6 +8,15 @@
     --backgroundblur: #4282ff;
     --banner-height: 65%;
 }
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track {
+    border-radius: 10px;
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb { 
+    background: linear-gradient(90deg, #001980 1%, #010529 100%);
+    border-radius: 10px;
+}
 *,
 *:before,
 *:after {
@@ -231,9 +240,10 @@ body {
 }
 .slider-btn {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 55%;
+    /* transform: translateY(-50%); */
     font-size: 2em;
+    color: var(--maincolor);
 }
 .prev-btn {
     left: 60px;
@@ -487,9 +497,6 @@ body {
     transition: all 0.2s ease;
 }
 /* pre-built keyboard */
-.prebuilt-keyboard-section{
-
-}
 .section-slogan{
     color: var(--maincolor);
     font-weight: 700;

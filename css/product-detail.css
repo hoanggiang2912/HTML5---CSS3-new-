@@ -367,3 +367,6 @@
 .add__btn:active {
     transform: scale(.99);
 }
+.product__btn.buy-now__btn:active {
+    transform: scale(.99);
+}

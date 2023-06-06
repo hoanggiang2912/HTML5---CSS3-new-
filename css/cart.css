@@ -233,3 +233,6 @@
     transition: .25s linear;
     border-radius: 5px;
 }
+.buy__now__btn.disable {
+    opacity: 0.6;
+}
