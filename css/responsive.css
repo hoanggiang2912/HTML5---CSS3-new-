@@ -186,12 +186,15 @@
 @media only screen and (min-width: 18.75em) and (max-width: 31.875em) {
     .product {
         width: 160px !important;
-        height: 300px !important;
-        flex-basis: 240px !important;
+        height: 320px !important;
+        flex-basis: 260px !important;
+    }
+    .product-wrapper {
+        gap: 20px !important;
     }
     .product .product__detail {
         gap: 0 !important;
-        margin-top: 200px !important;
+        margin-top: 220px !important;
     }
     .product__detail .product__name {
         font-size: 12px !important;

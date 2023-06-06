@@ -253,11 +253,11 @@ const app = {
                 localStorage.removeItem('cartProduct')
                 this.summaryHandler(btn.parentElement)
 
-                buyBtnHandler(cartProductItem, buyBtn, summaryBuyBtn)
+                this.buyBtnHandler(cartProductItem, buyBtn, summaryBuyBtn)
             }
         });
         // handle active/disable buy btn
-        buyBtnHandler(cartProductItem, buyBtn, summaryBuyBtn)
+        this.buyBtnHandler(cartProductItem, buyBtn, summaryBuyBtn)
     },
     closeResponThings () {
         responNav.style.transform = 'translateX(100%)'
@@ -327,11 +327,19 @@ const app = {
     // handle active/disable buy btn
     buyBtnHandler (cartProductItem , buyBtn , summaryBuyBtn) {
         if (cartProductItem) {
-            buyBtn.classList.remove('disable')
-            summaryBuyBtn.classList.remove('disable')
+            if(!buyBtn || !summaryBuyBtn) {
+                return
+            } else {
+                buyBtn.classList.remove('disable')
+                summaryBuyBtn.classList.remove('disable')
+            }
         } else {
-            buyBtn.classList.add('disable')
-            summaryBuyBtn.classList.add('disable')
+            if(!buyBtn || !summaryBuyBtn) {
+                return
+            } else {
+                buyBtn.classList.add('disable')
+                summaryBuyBtn.classList.add('disable')
+            }
         }
     },
     start () {
