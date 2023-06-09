@@ -8,6 +8,10 @@
     --backgroundblur: #4282ff;
     --banner-height: 65%;
 }
+@font-face {
+    font-family: 'FS PF BeauSans Pro';
+    src: url(/assets/font/FS\ PF\ BeauSans\ Pro/);
+}
 body::-webkit-scrollbar,
 body::-webkit-scrollbar-track {
     border-radius: 10px;

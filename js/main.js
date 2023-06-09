@@ -258,6 +258,24 @@ const app = {
         });
         // handle active/disable buy btn
         this.buyBtnHandler(cartProductItem, buyBtn, summaryBuyBtn)
+        // confirm overlay
+        const confirmOverlay = $('.confirm__overlay')
+        const buyNowBtn = $$('.buy__now__btn')
+        const confirmBtn = $('.confirm__btn')
+        if(this.cartProduct){
+            if (confirmOverlay) {
+                buyNowBtn.forEach(btn => {
+                    btn.onclick = () => {
+                        confirmOverlay.style.opacity = 1;
+                        confirmOverlay.style.transform = "translateY(0)"
+                    }
+                });
+                confirmBtn.onclick = () => {
+                    confirmOverlay.style.opacity = 0;
+                    confirmOverlay.style.transform = "translateY(-100%)"
+                }
+            }
+        }
     },
     closeResponThings () {
         responNav.style.transform = 'translateX(100%)'
@@ -349,3 +367,11 @@ const app = {
 window.onload = () => {
     app.start()
 }
+const arr = [
+    2 ,
+    4 , 
+    6
+]
+var items = arr.filter(function (item , arr) {
+    
+})

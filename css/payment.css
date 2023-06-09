@@ -1,0 +1,146 @@
+:root {
+    --maincolor: #00c2ff;
+    --backgroundcolor: linear-gradient(0deg, #0043a8 0%, #00114b 100%);
+    --overlaycolor: linear-gradient(270deg, #000000 0%, #d9d9d9 50.52%, #000000 100%);
+    --lightheaderitemhovercolor: #050728;
+    --hover: #ff9900;
+    --pricecolor: #4d4444;
+    --backgroundblur: #4282ff;
+    --banner-height: 65%;
+}
+.bill-info{
+    margin-block: 30px;
+    color: white;
+}
+.bill-info > * {
+    margin-block: 30px;
+}
+.bill-info *.flex {
+    align-items: center;
+    gap: 100px;
+}
+.info__title{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+}
+.info__title > i {
+    margin-right: 12px;
+}
+.location__info {
+    margin-top: 20px;
+}
+.location__csm__name,
+.location__csm__phone{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+.location__label{
+    padding: 10px;
+    background: linear-gradient(90deg, #0043A8 0%, #00114B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border: 3px solid var(--maincolor);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    z-index: 1;
+}
+.location__label::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: white;
+    z-index: -1;
+}
+.option__change{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--maincolor);
+}
+.confirm__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.12) 100%);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: .25s ease-in-out;
+}
+.bill__confirm{
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    width: fit-content;
+}
+.confirm__title{
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 70px;
+    letter-spacing: 0.1em;
+}
+.bill__product{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+    border-radius: 5px;
+    padding: 20px;
+}
+.bill__product__banner{
+    width: 80px;
+    height: 100px;
+}
+.bill__product__banner img {
+    width: 100%;
+    height: 100%;
+}
+.bill__product__name{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+}
+.bill__product__option > .flex{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: var(--hover);
+    justify-content: space-between;
+}
+.bill__schedule{
+    margin-top: 20px;
+}
+.schedule__detail {
+    display:flex;
+    justify-content:space-between;
+    flex-direction:column;
+    height: 199px;
+    flex-grow: 1;
+}
+.schedule__detail > *{
+    display: flex;
+    justify-content: space-between;
+}
+.confirm__btn{
+    padding: 16px 48px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: .2s linear;
+}
+.confirm__btn:hover {
+    background: black;
+    color: white;
+}
+.confirm__btn:active {
+    transform: scale(.95);
+}
+
+
