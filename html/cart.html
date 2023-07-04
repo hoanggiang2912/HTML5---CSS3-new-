@@ -18,13 +18,12 @@
     <div class="container">
         <header class="header">
             <div class="header__inner">
+                <a href="/index.html" class="logo flex"><img src="/assets/images/logo.svg" alt=""><span>TYPISTIAL</span></a>
                 <nav class="header-nav">
-                    <ul class="flex left__nav">
+                    <ul class="flex" style="gap: 60px">
+                        <li class="nav__item"><a href="/index.html" class="nav__link">TRANG CHỦ</a></li>
                         <li class="nav__item">
-                            <a href="/index.html" class="nav__link"><i class="fa-solid fa-house"></i></a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link"><i class="fa-solid fa-bag-shopping"></i></a>
+                            <a href="" class="nav__link">SẢN PHẨM</a>
                             <nav>
                                 <ul class="subnav">
                                     <li class="nav__item">
@@ -89,10 +88,10 @@
                                 </ul>
                             </nav>
                         </li>
+                        <li class="nav__item"><a href="" class="nav__link">LIÊN HỆ</a></li>
+                        <li class="nav__item"><a href="/html/about-us.html" class="nav__link">VỀ CHÚNG TÔI</a></li>
                     </ul>
                 </nav>
-                <a href="/index.html" class="logo flex"><img src="/assets/images/logo.svg"
-                        alt=""><span>TYPISTIAL</span></a>
                 <nav class="header-nav right__nav">
                     <ul class="flex">
                         <li class="nav__item">
@@ -161,15 +160,35 @@
         <div class="respon-overlay"></div>
         <!-- main section  -->
         <section class="section cart__main">
-            <div class="cart__title"><h1>GIỎ HÀNG</h1></div>
+            <nav>
+                <ul class="payment__nav">
+                    <div class="toggle-dropdown" style="display: none;"><i class="fa-solid fa-sliders"></i> Giỏ hàng</div>
+                    <li class="nav__item active"><i class="fa-solid fa-box"></i><a href="/html/cart.html" class="nav__link">Giỏ hàng</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li class="nav__item"><i class="fa-solid fa-wallet"></i><a href="/html/checkout.html" class="nav__link">Thanh toán</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li class="nav__item">
+                        <i class="fa-solid fa-credit-card"></i><a href="/html/payment.html" class="nav__link">Phương thức thanh toán</a>
+                    </li>
+                </ul>
+                <ul class="payment__respon__nav">
+                    <li class="nav__item active"><i class="fa-solid fa-box"></i><a href="/html/cart.html" class="nav__link">Giỏ hàng</a></li>
+                    <li class="nav__item"><i class="fa-solid fa-wallet"></i><a href="/html/checkout.html" class="nav__link">Thanh toán</a></li>
+                    <li class="nav__item">
+                        <i class="fa-solid fa-credit-card"></i><a href="/html/payment.html" class="nav__link">Phương thức thanh toán</a>
+                    </li>
+                </ul>
+            </nav>
             <div class="cart__body">
                 <div class="cart__product__list">
                     <nav>
                         <ul class="cart__nav">
-                            <li class="nav__item" style="display: block;">Sản phẩm</li>
+                            <li class="nav__item" style="display: block;">
+                                <input type="checkbox" name="checkAll" id="checkAll">
+                                <label for="checkAll">Giỏ hàng</label>
+                            </li>
                             <li class="nav__item">Giá</li>
                             <li class="nav__item" >Số lượng</li>
-                            <li class="nav__item" style="text-align: center;">Tổng</li>
                         </ul>
                     </nav>
                     <nav>
@@ -178,6 +197,7 @@
                         </ul>
                     </nav>
                     <div class="cart__product__wrapper">
+                        
                     </div>
                 </div>
                 <div class="cart__summary">
@@ -199,7 +219,7 @@
                             <span class="summary__total__price">$0</span>
                         </div>
                     </div>
-                    <a href="/html/payment.html" class="buy__now__btn">Mua ngay</a>
+                    <a href="/html/checkout.html" class="buy__now__btn">Mua ngay</a>
                 </div>
             </div>
         </section>

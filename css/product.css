@@ -1,9 +1,12 @@
-
 :root {
     --maincolor: #00c2ff;
+    --backgroundcolor: linear-gradient(0deg, #0043a8 0%, #00114b 100%);
+    --overlaycolor: linear-gradient(270deg, #000000 0%, #d9d9d9 50.52%, #000000 100%);
+    --lightheaderitemhovercolor: #050728;
     --hover: #ff9900;
     --pricecolor: #4d4444;
     --backgroundblur: #4282ff;
+    --banner-height: 65%;
 }
 *,
 *:before,
@@ -46,18 +49,33 @@ body {
     line-height: 1;
 }
 /* header  */
+.product__page .header .logo,
+.product__page .header .magni-icon,
+.product__page .header .nav__link {
+    color: white !important;
+}
+.product__page .header:hover {
+    background: white !important;
+}
+.product__page .header:hover .logo,
+.product__page .header:hover .nav__link,
+.product__page .header:hover .magni-icon {
+    color: var(--lightheaderitemhovercolor) !important;
+}
 .header {
     transition: .2s linear !important;
 }
 /* hero banner */
 .hero-banner {
     width: 100%;
-    aspect-ratio: 2/.9;
+    height: 200px;
     position: relative;
+    background-image: url(/assets/images/switches_banner.webp);
+    background-size: cover;
+    background-attachment: fixed;
 }
-.hero-banner img {
-    width: 100%;
-    height: 100%;
+.keycap__banner {
+    background-image: url(/assets/images/keycap_banner.webp);
 }
 .banner__overlay {
     position: absolute;
@@ -65,7 +83,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(217, 217, 217, 0.2) 50.52%, rgba(0, 0, 0, 0.6) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4));
 }
 .overlay__content {
     text-align: center;
@@ -100,7 +118,7 @@ body {
     line-height: 24px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: var(--lightheaderitemhovercolor);
     position: relative;
 }
 .product__nav .nav__link::before {
@@ -122,7 +140,7 @@ body {
     transform: scale(1)
 }
 .section__title {
-    color: white;
+    color: var(--lightheaderitemhovercolor);
     font-size: 38px;
     font-weight: 700;
     letter-spacing: .1em;

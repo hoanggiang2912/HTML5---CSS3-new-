@@ -228,6 +228,7 @@ const app = {
         }
         // add to cart
         const addBtn = $('.add__btn')
+        const addBtns = $$('.btn.label > i')
         if(addBtn) {
             addBtn.onclick = () => {
                 const productInfo = {
@@ -276,6 +277,37 @@ const app = {
                 }
             }
         }
+        // cart respon nav handler 
+        const toggleDropdown = $('.toggle-dropdown')
+        const dropdown = $('.payment__respon__nav')
+        const cartNav = $('.payment__nav')
+        if(toggleDropdown) {
+            toggleDropdown.onclick = () => {
+                cartNav.style.marginBottom = '8px'
+                
+                dropdown.classList.toggle('active')
+                dropdown.style.animation = 'navActive .1s cubic-bezier(0.19, 1, 0.22, 1)'
+                
+                setTimeout(() => {
+                    dropdown.style.animation = ''
+                }, 1000);
+            }
+        }
+        //payment method choosing handler
+        const paymentMethods = $$('.payment__method')
+        this.choosingOption(paymentMethods , '.payment__method')
+        //shipping options choosing handler
+        const shippingOptions = $$('.shipping__option')
+        this.choosingOption(shippingOptions , '.shipping__option')
+    },
+    choosingOption (options , optionSelector) {
+        options.forEach(item => {
+            item.onclick = () => {
+                $(`${optionSelector}.active`).classList.remove('active')
+
+                item.classList.toggle('active')
+            }
+        })
     },
     closeResponThings () {
         responNav.style.transform = 'translateX(100%)'
@@ -300,13 +332,16 @@ const app = {
             if (this.cartProduct) {
                 const product = `
                     <div class="cart__product">
-                        <div class="cart__product__banner"><img src="${this.cartProduct.productImageSrc}" alt=""></div>
                         <div class="flex">
-                            <div class="cart__product__detail">
-                                <div class="cart__product__name">${this.cartProduct.productName}</div>
-                                <div class="cart__product__options">
-                                    <span>${this.cartProduct.productOption}</span>
-                                    <span>${this.cartProduct.productSetQty}</span>
+                            <div class="flex" style="gap: 8px">
+                                <input type="checkbox" checked="checked" name="productChoosed" id="productChoosed">
+                                <label for="productChoosed" class="cart__product__banner"><img src="${this.cartProduct.productImageSrc}" alt=""></label>
+                                <div class="cart__product__detail">
+                                    <div class="cart__product__name">${this.cartProduct.productName}</div>
+                                    <div class="cart__product__options">
+                                        <span>${this.cartProduct.productOption}</span>
+                                        <span>${this.cartProduct.productSetQty}</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="flex">
@@ -316,7 +351,6 @@ const app = {
                                     <input type="number" value="${this.cartProduct.productQty}" min="0" max="100" class="qty__input">
                                     <button class="plus__btn">+</button>
                                 </div>
-                                <div class="cart__product__price cart__product__total">$${Number(this.cartProduct.productPrice.split('').slice(1).join('')) * Number(this.cartProduct.productQty)}</div>
                             </div>
                         </div>
                         <div class="del__btn"><i class="fa-solid fa-circle-xmark"></i></div>

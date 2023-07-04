@@ -7,9 +7,7 @@
     <title>Thanh Toán - TYPISTIAL</title>
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/log-in.css">
     <link rel="stylesheet" href="/css/cart.css">
-    <link rel="stylesheet" href="/css/payment.css">
     <link rel="stylesheet" href="/css/product-detail.css">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -20,20 +18,19 @@
     <div class="container">
         <header class="header">
             <div class="header__inner">
+                <a href="/index.html" class="logo flex"><img src="/assets/images/logo.svg" alt=""><span>TYPISTIAL</span></a>
                 <nav class="header-nav">
-                    <ul class="flex left__nav">
+                    <ul class="flex" style="gap: 60px">
+                        <li class="nav__item"><a href="/index.html" class="nav__link">TRANG CHỦ</a></li>
                         <li class="nav__item">
-                            <a href="/index.html" class="nav__link"><i class="fa-solid fa-house"></i></a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link"><i class="fa-solid fa-bag-shopping"></i></a>
+                            <a href="" class="nav__link">SẢN PHẨM</a>
                             <nav>
                                 <ul class="subnav">
                                     <li class="nav__item">
-                                        <a href="" class="nav__link">SẢN PHẨM</a>
+                                        <a href="" class="nav__link">CATEGORIES</a>
                                         <ul>
-                                            <li class="nav__item"><a class="nav__link" href="">Có Sẵn</a></li>
-                                            <li class="nav__item"><a class="nav__link" href="">Bàn Phím</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">IN STOCK</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">KEYBOARDS</a></li>
                                             <li class="nav__item"><a class="nav__link" href="">KITS</a></li>
                                             <li class="nav__item"><a class="nav__link" href="/html/switches.html">SWITCHES</a>
                                             </li>
@@ -61,57 +58,42 @@
                                     </li>
                                     <li class="nav__item"><a href="/html/switches.html" class="nav__link">SWITCHES</a>
                                         <ul>
-                                                <li class="nav__item"><a class="nav__link" href="/html/milky-pro.html">Gateron KS-3
-                                                        Milky Pro Switch Set</a></li>
-                                                <li class="nav__item"><a class="nav__link" href="">Gateron Ink V2 Switch Set</a>
-                                                </li>
-                                                <li class="nav__item"><a class="nav__link" href="">Gateron Cap V2 Switch Set</a>
-                                                </li>
-                                                <li class="nav__item"><a class="nav__link" href="">Gateron Box CJ Linear Switch
-                                                        Set</a></li>
-                                                <li class="nav__item"><a class="nav__link" href="">Gateron Box Ink V2 Switch Set</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav__item"><a href="/html/pre-built.html" class="nav__link">BÀN PHÍM
-                                                PRE-BUILT</a>
-                                            <ul>
-                                                <li class="nav__item"><a class="nav__link" href="">IQUNIX OG80 Wormhole Wireless</a>
-                                                </li>
-                                                <li class="nav__item"><a class="nav__link" href="">IQUNIX L80 Formula Typing
-                                                        Wireless</a></li>
-                                                <li class="nav__item"><a class="nav__link" href="">Keychron Q8 (Alice Layout)
-                                                        QMK</a></li>
-                                                <li class="nav__item"><a class="nav__link" href="">AKKO Black&Cyan 5075B Plus</a>
-                                                </li>
-                                                <li class="nav__item"><a class="nav__link" href="">AKKO Dracula Castle 5075B
-                                                        Plus</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </li>
-                        </ul>
-                    </nav>
-                    <a href="/index.html" class="logo flex"><img src="/assets/images/logo.svg" alt=""><span>TYPISTIAL</span></a>
-                    <nav class="header-nav right__nav">
-                        <ul class="flex">
-                            <li class="nav__item">
-                                <!-- expand search-bar -->
-                                <div class="search-bar">
-                                    <input type="text" name="searchbar" placeholder="Search..." class="bar">
-                                    <i class="fa-solid fa-magnifying-glass magni-icon" style="cursor: pointer;"></i>
-                                </div>
-                            </li>
-                            <li class="nav__item"><a href="/html/log-in.html" class="nav__link">
-                                    <i class="fa-solid fa-user"></i></a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/html/cart.html" class="nav__link"><i class="fa-solid fa-cart-shopping"></i></a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <ul class="header-nav respon-bar-icon flex">
+                                            <li class="nav__item"><a class="nav__link" href="/html/milky-pro.html">Gateron KS-3
+                                                    Milky Pro Switch Set</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">Gateron Ink V2 Switch Set</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="">Gateron Cap V2 Switch Set</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="">Gateron Box CJ Linear Switch
+                                                    Set</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">Gateron Box Ink V2 Switch Set</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav__item"><a href="/html/pre-built.html" class="nav__link">PRE-BUILT
+                                            KEYBOARDS</a>
+                                        <ul>
+                                            <li class="nav__item"><a class="nav__link" href="">IQUNIX OG80 Wormhole Wireless</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="">IQUNIX L80 Formula Typing
+                                                    Wireless</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">Keychron Q8 (Alice Layout)
+                                                    QMK</a></li>
+                                            <li class="nav__item"><a class="nav__link" href="">AKKO Black&Cyan 5075B Plus</a>
+                                            </li>
+                                            <li class="nav__item"><a class="nav__link" href="">AKKO Dracula Castle 5075B
+                                                    Plus</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="nav__item"><a href="" class="nav__link">LIÊN HỆ</a></li>
+                        <li class="nav__item"><a href="/html/about-us.html" class="nav__link">VỀ CHÚNG TÔI</a></li>
+                    </ul>
+                </nav>
+                <nav class="header-nav right__nav">
+                    <ul class="flex">
                         <li class="nav__item">
                             <!-- expand search-bar -->
                             <div class="search-bar">
@@ -119,11 +101,27 @@
                                 <i class="fa-solid fa-magnifying-glass magni-icon" style="cursor: pointer;"></i>
                             </div>
                         </li>
+                        <li class="nav__item"><a href="/html/log-in.html" class="nav__link">
+                                <i class="fa-solid fa-user"></i></a>
+                        </li>
                         <li class="nav__item">
-                            <i class="fa-solid fa-bars open-btn"></i>
+                            <a href="/html/cart.html" class="nav__link"><i class="fa-solid fa-cart-shopping"></i></a>
                         </li>
                     </ul>
-                </div>
+                </nav>
+                <ul class="header-nav respon-bar-icon flex">
+                    <li class="nav__item">
+                        <!-- expand search-bar -->
+                        <div class="search-bar">
+                            <input type="text" name="searchbar" placeholder="Search..." class="bar">
+                            <i class="fa-solid fa-magnifying-glass magni-icon" style="cursor: pointer;"></i>
+                        </div>
+                    </li>
+                    <li class="nav__item">
+                        <i class="fa-solid fa-bars open-btn"></i>
+                    </li>
+                </ul>
+            </div>
         </header>
         <!-- respon nav bar -->
         <div class="respon-nav">
@@ -161,121 +159,276 @@
         </div>
         <div class="respon-overlay"></div>
         <!-- user's product -->
-        <section class="section cart__main">
-            <div class="cart__title">
-                <h1>THANH TOÁN</h1>
-            </div>
-            <!-- bill infomation -->
-            <div class="bill-info">
-                <div class="location">
-                    <h4 class="info__title location__title"><i class="fa-solid fa-location-dot"></i>Địa chỉ của bạn</h4>
-                    <div class="location__info flex">
-                        <div>
-                            <span class="location__csm__name">Wade Warren</span>
-                            <span class="location__csm__phone">(629) 555-0129</span>
-                        </div>
-                        <div>
-                            <span class= "info__option">3891 Ranchview Dr. Richardson, California 62639</span>
-                            <label class="location__label">Mặc định</label>
-                            <span class="option__change">Thay đổi</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="payment-method flex">
-                    <span class="info__title"><i class="fa-solid fa-credit-card"></i>Phương thức thanh toán</span>
-                    <div>
-                        <span class="info__option payment-method__option">Thẻ tín dụng</span>
-                        <span class="option__change">Thay đổi</span>
-                    </div>
-                </div>
-                <div class="shipping-method flex">
-                    <span class="info__title"><i class="fa-solid fa-truck-fast"></i>Phương thức giao hàng</span>
-                    <div>
-                        <span class="info__option shipping-method__option">Fedex</span>
-                        <span class="option__change">Thay đổi</span>
-                    </div>
-                </div>
-            </div>
-            <div class="cart__body">
-                <div class="cart__product__list">
-                    <nav>
-                        <ul class="cart__nav">
-                            <li class="nav__item" style="display: block;">Sản phẩm</li>
-                            <li class="nav__item">Giá</li>
-                            <li class="nav__item">Số lượng</li>
-                            <li class="nav__item" style="text-align: center;">Tổng</li>
-                        </ul>
-                    </nav>
-                    <nav>
-                        <ul class="cart__nav__respon cart__nav">
-                            <li class="nav__item">Sản phẩm</li>
-                        </ul>
-                    </nav>
-                    <div class="cart__product__wrapper">
-                    </div>
-                </div>
-                <div class="cart__summary">
-                    <div class="summary__wrapper">
-                        <div class="summary__title">Tổng hóa đơn</div>
-                        <div class="summary__detail">
-                            <div class="flex">
-                                <span>Tổng tiền sản phẩm</span>
-                                <span class="summary__price">$0</span>
+        <section class="section checkout-main-section"> 
+            <nav>
+                <ul class="payment__nav">
+                    <div class="toggle-dropdown" style="display: none;"><i class="fa-solid fa-sliders"></i> Giỏ hàng</div>
+                    <li class="nav__item"><i class="fa-solid fa-box"></i><a href="/html/cart.html" class="nav__link">Giỏ hàng</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li class="nav__item"><i class="fa-solid fa-wallet"></i><a href="/html/checkout.html" class="nav__link">Thanh toán</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li class="nav__item active">
+                        <i class="fa-solid fa-credit-card"></i><a href="/html/payment.html" class="nav__link">Phương thức thanh toán</a>
+                    </li>
+                </ul>
+                <ul class="payment__respon__nav">
+                    <li class="nav__item"><i class="fa-solid fa-box"></i><a href="/html/cart.html" class="nav__link">Giỏ hàng</a></li>
+                    <li class="nav__item"><i class="fa-solid fa-wallet"></i><a href="/html/checkout.html" class="nav__link">Thanh toán</a></li>
+                    <li class="nav__item active">
+                        <i class="fa-solid fa-credit-card"></i><a href="/html/payment.html" class="nav__link">Phương thức thanh toán</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="checkout__wrapper flex" style="flex-wrap: wrap-reverse">
+                <div class="checkout__form__wrapper">
+                    <div class="payment__methods">
+                        <h5 class="payment__methods__title">Chọn phương thức thanh toán</h5>
+                        <div class="payment__method active">
+                            <div class="flex" style="gap: 12px">
+                                <i class="fa-regular fa-circle-check option-btn"></i>
+                                <i class="fa-regular fa-circle option-btn"></i>
+                                <h5 class="method__name">Thẻ tín dụng</h5>
                             </div>
-                            <div class="flex">
-                                <span>Phí giao hàng</span>
-                                <span>miễn phí</span>
-                            </div>
-                            <h5 class="coupon">Thêm mã giảm giá <i class="fa-solid fa-arrow-right"></i></h5>
+                            <form action="" class="payment-method-info__form" method="post">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Số thẻ">
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Tên thẻ">
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="flex" style="gap: 20px">
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Ngày hết hạn">
+                                        <p class="form__message"></p>
+                                    </div>
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="CVV">
+                                        <p class="form__message"></p>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <input type="checkbox" name="paymentInfo" id="paymentInfo">
+                                    <label for="paymentInfo">Ghi nhớ thông tin thẻ</label>
+                                </div>
+                            </form>
                         </div>
-                        <div class="summary__total flex">
-                            <span>Thực chi</span>
-                            <span class="summary__total__price">$0</span>
+                        <div class="payment__method">
+                            <div class="flex" style="gap: 12px">
+                                <i class="fa-regular fa-circle-check option-btn"></i>
+                                <i class="fa-regular fa-circle option-btn"></i>
+                                <h5 class="method__name">Paypal</h5>
+                            </div>
+                            <form action="" class="payment-method-info__form" method="post">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Số thẻ">
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Tên thẻ">
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="flex" style="gap: 20px">
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Ngày hết hạn">
+                                        <p class="form__message"></p>
+                                    </div>
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="CVV">
+                                        <p class="form__message"></p>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <input type="checkbox" name="paymentInfo-paypal" id="paymentInfo-paypal">
+                                    <label for="paymentInfo-paypal">Ghi nhớ thông tin thẻ</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="payment__method">
+                            <div class="flex" style="gap: 12px">
+                                <i class="fa-regular fa-circle-check option-btn"></i>
+                                <i class="fa-regular fa-circle option-btn"></i>
+                                <h5 class="method__name">Momo</h5>
+                            </div>
+                            <form action="" class="payment-method-info__form" method="post">
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Số thẻ">
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="form__group">
+                                    <input type="text" class="form__input" placeholder="Tên thẻ">
+                                    <p class="form__message"></p>
+                                </div>
+                                <div class="flex" style="gap: 20px">
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Ngày hết hạn">
+                                        <p class="form__message"></p>
+                                    </div>
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="CVV">
+                                        <p class="form__message"></p>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <input type="checkbox" name="paymentInfo-momo" id="paymentInfo-momo">
+                                    <label for="paymentInfo-momo">Ghi nhớ thông tin thẻ</label>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                    <a href="#" class="buy__now__btn">Mua ngay</a>
+                    <form action="" method="post" class="checkout__form">
+                        <h4 class="cart__form__title" style="margin-bottom: 18px;">Địa chỉ đơn hàng</h4>
+                        <div class="form__group">
+                            <input type="checkbox" name="shippingAddress" id="shippingAddress">
+                            <label for="shippingAddress">Địa chỉ giống với địa chỉ vận chuyển</label>
+                        </div>
+                        <hr style="margin-block: 30px">
+                        <h4 class="cart__form__title" style="margin-bottom: 18px;">Địa chỉ giao dịch</h4>
+                        <div class="form__group">
+                            <label for="" class="cart__form__label">Địa chỉ*</label>
+                            <input type="text" class="form__input" placeholder="Nhập địa chỉ giao hàng">
+                            <p class="form__message"></p>
+                        </div>
+                        <div class="form__group">
+                            <label for="" class="cart__form__label">Email*</label>
+                            <input type="text" class="form__input" placeholder="Nhập email của bạn">
+                            <p class="form__message"></p>
+                        </div>
+                        <div class="form__group">
+                            <label for="" class="cart__form__label">Số điện thoại*</label>
+                            <input type="text" class="form__input" placeholder="Nhập số điện thoại của bạn">
+                            <p class="form__message"></p>
+                        </div>
+                        <div class="form__group">
+                            <label for="" class="cart__form__label">Nhập tên đường và số nhà*</label>
+                            <input type="text" class="form__input" placeholder="Nhập tên đường / số nhà">
+                            <p class="form__message"></p>
+                        </div>
+                        <div class="flex" style="flex-wrap: wrap">
+                            <div class="form__group">
+                                <label for="" class="cart__form__label">Chọn thành phố / tỉnh*</label>
+                                <select name="" id="" class="form__select">
+                                    <option value="" selected>TP.HCM</option>
+                                </select>
+                            </div>
+                            <div class="form__group">
+                                <label for="" class="cart__form__label">Chọn quận / huyện*</label>
+                                <select name="" id="" class="form__select">
+                                    <option value="" selected>Tân Bình</option>
+                                </select>
+                            </div>
+                        </div>
+                        <h4 class="cart__form__title" style="margin-bottom: 18px;">Lưu thông tin</h4>
+                        <div class="form__group">
+                            <input type="checkbox" name="saveInfo" id="saveInfo">
+                            <label for="saveInfo">Lưu lại thông tin giao hàng cho những đơn hàng tiếp theo</label>
+                        </div>
+                    </form>
                 </div>
+                <div class="checkout__summary">
+                    <div class="summary__product flex">
+                        <div class="flex" style="gap: 8px">
+                            <div class="summary__product__banner"></div>
+                            <div>
+                                <div class="summary__product__name">Gateron KS-3 Milky Pro</div>
+                                <div class="product__option flex">
+                                    <span>Yellow</span>
+                                    <span>110 switches</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__price">$165.00</div>
+                    </div>
+                    <div class="summary__coupon">
+                        <h4 class="coupon__title">Mã giảm giá</h4>
+                        <div class="form__group">
+                            <input class="form__input" type="text" placeholder="Nhập mã giảm giá ">
+                            <button class="form__btn">Áp dụng</button>
+                        </div>
+                        <p class="call-to-action">Bạn là khác hàng mới ? <a class="hightlight__text">Đăng ký</a> ngay để nhận giá
+                            tốt hơn</p>
+                    </div>
+                    <div class="summary__detail">
+                        <div class="detail__item">
+                            <h5 class="detail__title">Tiền sản phẩm</h5>
+                            <p class="detail__cost" style="color: #050728; font-weight: 800;">$165.00</p>
+                        </div>
+                        <div class="detail__item">
+                            <h5 class="detail__title">Giảm giá</h5>
+                            <p class="detail__cost">$0</p>
+                        </div>
+                        <div class="detail__item">
+                            <h5 class="detail__title">Phí vận chuyển</h5>
+                            <p class="detail__cost">$11</p>
+                        </div>
+                    </div>
+                    <hr style="margin-block: 12px;">
+                    <div class="checkout__summary__total detail__item">
+                        <h4 class="detail__title" style="font-size: 18px;">Tổng tiền</h4>
+                        <p class="detail__cost" style="color: #050728; font-weight: 800; font-size: 18px">$176.00</p>
+                    </div>
+                    <a href="/html/confirm.html" class="form__btn">Tiếp tục</a>
+                </div> 
             </div>
         </section>
-        <div class="confirm__overlay">
-            <div class="bill__confirm">
-                <h1 class="confirm__title">XÁC NHẬN</h1>
-                <div class="bill__product flex">
-                    <div class="bill__product__banner"><img src="/assets/images/milky-yello-pro-main-banner.png" alt=""></div>
-                    <div class="bill__product__option">
-                        <h4 class="bill__product__name">Gateron KS-3 Milky Pro</h4>
-                        <div class="flex">
-                            <span>Yellow</span>
-                            <span>110 switches</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="bill__schedule flex">
-                    <div class="line__schedule">
-                        <img src="/assets/images/line-schedule.png" alt="">
-                    </div>
-                    <div class="schedule__detail">
-                        <div><span>Khách hàng xác nhận</span><i class="fa-solid fa-circle-check"></i></div>
-                        <div><span>Shop chuẩn bị hàng</span><i class="fa-solid fa-spinner"></i></div>
-                        <div><span>Giao hàng</span><i class="fa-regular fa-circle"></i></div>
-                    </div>
-                </div>
-                <button class="confirm__btn">OK</button>
+        <!-- footer -->
+        <footer class="footer flex">
+            <div class="logo">
+                <a href="#">
+                    <img src="/assets/images/logo.svg" alt="">
+                    <h1>TYPISTIAL</h1>
+                </a>
             </div>
-        </div>
-        <div class="summary__respon">
-            <div class="select__all">
-                <i class="fa-regular fa-circle-check"></i>
-                <span>Chọn tất cả</span>
-            </div>
-            <div class="respon__summary__total flex">
-                <div>
-                    <h5>Total: <span class="summary__total__price">$0</span></h5>
-                    <h6>Miễn phí vận chuyển</h6>
+            <div class="footer__top flex">
+                <div class="follow-us">
+                    <p class="follow-us-content">Đăng ký danh sách email của chúng tôi để trở thành một trong những người đầu
+                        tiên biết về các sản phẩm mới, giảm giá, giảm giá và giảm giá, v.v.! Là người đăng ký mới, bạn sẽ nhận
+                        được mã cá nhân để sử dụng cho đơn hàng đầu tiên của mình.
+                    </p>
+                    <form action="" class="follow-us-form">
+                        <div class="form-group"><input type="text" placeholder="Email"></div>
+                        <a href="#" class="form__btn btn">ĐĂNG KÝ NGAY</a>
+                    </form>
                 </div>
-                <button class="buy__now__btn respon__summary__btn">Mua ngay</button>
+                <nav class="footer__nav">
+                    <h2 class="nav__title">TYPISTIAL</h2>
+                    <ul class="about-us">
+                        <li class="nav__item"><a href="/html/about-us.html" class="nav__link">VỀ TÁC GIẢ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">LIÊN HỆ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">BÁN SỈ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">PHẢN HỒI</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">CHÍNH SÁCH HOÀN TRẢ</a></li>
+                        <li class="nav__item"><a href="" class="nav__link">DỊCH VỤ KHÁCH HÀNG</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="nav__title">SHOP</h2>
+                    <ul class="shop">
+                        <li class="nav__item"><a href="" class="nav__link">TẤT CẢ SẢN PHẨM</a></li>
+                        <li class="nav__item"><a href="/html/log-in.html" class="nav__link">TÀI KHOẢN</a></li>
+                        <li class="nav__item"><a href="/html/keycaps.html" class="nav__link">KEYCAPS</a></li>
+                        <li class="nav__item"><a href="/html/switches.html" class="nav__link">SWITCHES</a></li>
+                        <li class="nav__item"><a href="/html/pre-built.html" class="nav__link">KEYBOARDS</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="nav__title">FOLLOW US</h2>
+                    <ul class="social__icons flex">
+                        <li class="nav__item"><a href="" class="nav__link"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="nav__item"><a href="" class="nav__link"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li class="nav__item"><a href="https://github.com/hoanggiang2912/Giang_Profile" class="nav__link"><i
+                                    class="fa-brands fa-github"></i></a></li>
+                        <li class="nav__item"><a href="" class="nav__link"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
+        </footer>
+        <hr style="margin: 0">
+        <footer class="right-reserved">
+            <h4>© 2023 TYPISTIAL ™</h4>
+            <h4>ALL RIGHT RESERVED</h4>
+        </footer>
     </div>
 </body>
 <script src="/js/main.js"></script>

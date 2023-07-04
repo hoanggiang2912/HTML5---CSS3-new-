@@ -7,6 +7,7 @@
     --pricecolor: #4d4444;
     --backgroundblur: #4282ff;
     --banner-height: 65%;
+    --labelcolor: #2C2C2C;  
 }
 /* product detail */
 .product-detail-section {
@@ -53,7 +54,7 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
-    color: #D9D9D9;
+    color: var(--labelcolor);
 }
 .product__detail__content{
     color: white;
@@ -67,15 +68,15 @@
     line-height: 21px;
     letter-spacing: 0.02em;
 }
-.product-detail .product__price {
+.product-detail-section .product__price {
     font-weight: 700;
     font-size: 28px;
     line-height: 34px;
 }
 .product__btn {
-    color: white;
+    color: var(--lightheaderitemhovercolor);
     padding: 12px 24px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--lightheaderitemhovercolor);
     border-radius: 5px;
     transition: .2s cubic-bezier(0.215, 0.610, 0.355, 1);
     font-weight: 700;
@@ -83,27 +84,34 @@
     line-height: 21px;
     letter-spacing: 0.02em;
 }
+
 .product__btn.active {
-    color: var(--maincolor);
+    color: white;
     border: 1px solid var(--maincolor);
+    background: var(--maincolor);
 }
 .product__btn:hover {
-    background: white;
-    color: black;
+    color: white;
+    background: var(--maincolor);
+    border-color: var(--maincolor) !important;
 }
 .product__detail__content .product__title{
+    color: var(--lightheaderitemhovercolor);
     margin-bottom: 12px;
 }
 .product__qty__input {
     display: flex;
+    width: fit-content;
+    border: 1px solid var(--lightheaderitemhovercolor);
+    color: var(--lightheaderitemhovercolor);
+    border-radius: 8px;
 }
 .product__qty__input > * {
-    background: rgba(60, 114, 196, 0.4);
+    color: var(--lightheaderitemhovercolor);
 }
 .product__qty__input button{
     width: 50px;
     aspect-ratio: 1;
-    color: white;
     font-weight: 700;
     font-size: 22px;
 }
@@ -111,7 +119,6 @@
     border: transparent;
     outline: none;
     text-align: center;
-    color: white;
 }
 .buy-now {
     display: flex;
@@ -193,7 +200,9 @@
 }
 .description__item__container{
     padding: 60px;
-    background: rgba(66, 130, 255, 0.4);
+    background: white;
+    box-shadow: 0px 10px 40px -10px rgba(0, 0, 0, 0.20);
+    color: var(--lightheaderitemhovercolor);
     border-radius: 10px;
     width: 100%;
     display: flex;
@@ -220,7 +229,6 @@
     font-size: 22px;
     line-height: 33px;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
     margin-bottom: 20px;
 }
 .retooled__mold .description__title {
@@ -231,7 +239,7 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: var(--lightheaderitemhovercolor);
 }
 .product__gallery__wrapper {
     display: grid;
@@ -284,7 +292,7 @@
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: var(--lightheaderitemhovercolor);
 }
 .total__stars {
     border-right: 1px solid gray;
@@ -344,7 +352,7 @@
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: var(--lightheaderitemhovercolor);
 }
 .review__product__name {
     font-weight: 700;
@@ -359,7 +367,7 @@
     font-size: 14px;
     line-height: 21px;
     letter-spacing: 0.02em;
-    color: #FFFFFF;
+    color: var(--lightheaderitemhovercolor);
 }
 .customer__reviews .more-btn {
     margin: 0;

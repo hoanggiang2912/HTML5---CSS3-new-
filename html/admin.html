@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - TYPISTIAL</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container admin-page">
+        <div class="sidebar">
+            <div style="
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;">
+            <a href="/index.html" class="logo">
+                <img src="/assets/images/logo.svg" alt="Typistial logo">
+            </a>
+            <i class="fa-solid fa-bars-sort"></i>
+        </div>
+            <nav class="sidebar__nav administrator__nav">
+                <h4 class="sidebar__nav__title">ADMINISTRATOR</h4>
+                <ul>
+                    <li class="nav__item active" style="background: #00c2ff"><a href="" class="nav__link"><i class="fa-solid fa-chart-simple" style="color: white;"></i> Dashboard</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-envelope"></i> Messages</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-users"></i> Socials</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-file"></i> Documents</a></li>
+                </ul>
+            </nav>
+            <nav class="sidebar__nav setting__nav">
+                <h4 class="sidebar__nav__title">SETTING</h4>
+                <ul>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-user-pen"></i> Roles</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-arrow-right-arrow-left"></i> Requests</a></li>
+                    <li class="nav__item"><a href="" class="nav__link"><i class="fa-solid fa-gear"></i> Preferences</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="dashboard">
+            <div class="dashboard__header">
+                <div class="searchbar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="notification">
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="line"></div>
+                <div class="admin flex">
+                    <a href=""><img src="/assets/images/customer1.png" alt="Typistial customer" class="admin__avt"></a>
+                    <div class="admin__detail">
+                        <h4 class="admin__name">Hồ Duy Hoàng Giang</h4>
+                        <h5 class="admin__position">Admin</h5>
+                    </div>
+                    <i class="fa-solid fa-chevron-down" style="color: white;"></i>
+                </div>
+            </div>
+            <div class="dashboard__body">
+                <div class="top__box">
+                    <div class="box__item">
+                        <h4 class="box__title" style="display: block;"><i class="fa-solid fa-circle"></i> Update</h4>
+                        <div class="box__content">
+                            <h5>Sales revenue increased</h5>    
+                            <span class="masking-text">20%</span><h5 style="display: inline-block">in 1 week</h5>
+                            <a href="" class="box__content__link" style="display: block; margin: 0;">See analystic <i class="fa-solid fa-chevron-right"></i></a>
+                        </div>  
+                    </div>
+                    <div class="box__item">
+                        <h4 class="box__title">Net revenue <i class="fa-solid fa-ellipsis"></i></h4>
+                        <h2 class="hightlight__content">$123.000</h2>
+                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month</label>
+                    </div>
+                    <div class="box__item">
+                        <h4 class="box__title">Net revenue <i class="fa-solid fa-ellipsis"></i></h4>
+                        <h2 class="hightlight__content">$123.000</h2>
+                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month</label>
+                    </div>
+                    <div class="box__item">
+                        <h4 class="box__title">Net revenue <i class="fa-solid fa-ellipsis"></i></h4>
+                        <h2 class="hightlight__content">$123.000</h2>
+                        <label class="box__label"><i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month</label>
+                    </div>
+                </div>
+                <div class="bottom__box">
+                    <div class="bottom__box__item bottom__left__box">
+                        <div class="box__item">
+                            <h4 class="box__title">Product <i class="fa-solid fa-ellipsis"></i></h4>
+                            <div class="item__specs__wrapper flex">
+                                <div class="spec__item flex">
+                                    <div class="spec__title"><i class="fa-solid fa-box spec__icon"></i> Product lauched</div>
+                                    <div class="hightlight__content">100</div>
+                                    <label class="box__label">
+                                        <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month
+                                    </label>
+                                </div>
+                                <div class="spec__item">
+                                    <div class="spec__title"><i class="fa-solid fa-box spec__icon"></i> Product sold</div>
+                                    <div class="hightlight__content">50</div>
+                                    <label class="box__label">
+                                        <i class="fa-solid fa-arrow-trend-up label__icon"></i> 5% vs last month
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box__item transactions">
+                            <h2 class="box__title">Transactions</h2>
+                            <div class="transaction__item">
+                                <div class="flex" style="gap: 12px">
+                                    <a href=""><img src="/assets/images/transactions-img.png" alt="" class="item__img"></a>
+                                    <div class="item__detail">
+                                        <h5 class="item__name">AKKO 5075B Cyan & Black</h5>
+                                        <label for="" class="item__label">July 21th 2023 - 09:45</label>
+                                    </div>
+                                </div>
+                                <div class="item__detail" style="text-align: right;">
+                                    <h6 class="item__status masking-text">Completed</h6>
+                                    <label for="" class="item__label">CHFD12KAKDF9</label>    
+                                </div>
+                            </div>
+                            <div class="transaction__item">
+                                <div class="flex" style="gap: 12px">
+                                    <a href=""><img src="/assets/images/transactions-img.png" alt="" class="item__img"></a>
+                                    <div class="item__detail">
+                                        <h5 class="item__name">AKKO 5075B Cyan & Black</h5>
+                                        <label for="" class="item__label">July 21th 2023 - 09:45</label>
+                                    </div>
+                                </div>
+                                <div class="item__detail" style="text-align: right;">
+                                    <h6 class="item__status masking-text">Completed</h6>
+                                    <label for="" class="item__label">CHFD12KAKDF9</label>    
+                                </div>
+                            </div>
+                            <div class="transaction__item">
+                                <div class="flex" style="gap: 12px">
+                                    <a href=""><img src="/assets/images/transactions-img.png" alt="" class="item__img"></a>
+                                    <div class="item__detail">
+                                        <h5 class="item__name">AKKO 5075B Cyan & Black</h5>
+                                        <label for="" class="item__label">July 21th 2023 - 09:45</label>
+                                    </div>
+                                </div>
+                                <div class="item__detail" style="text-align: right;">
+                                    <h6 class="item__status masking-text">Completed</h6>
+                                    <label for="" class="item__label">CHFD12KAKDF9</label>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom__box__item bottom__right__box">
+                        <div class="analystic box__item">
+                            <h2 class="box__title">Analystic</h2>
+                            <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+    const xValues = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Nov', 'Dec'];
+    const yValues = [55, 150, 135, 100, 175, 200, 210, 205, 200, 180, 230];
+
+    new Chart("myChart", {
+        type: "line",
+        data: {
+            labels: xValues,
+            datasets: [{
+                fill: false,
+                lineTension: 0,
+                backgroundColor: "rgba(0,0,255,1.0)",
+                borderColor: "rgba(0,0,255,0.1)",
+                data: yValues
+            }]
+        },
+        options: {
+            legend: { display: false },
+            scales: {
+                yAxes: [{ ticks: { min: 0, max: 250 } }],
+            }
+        }
+    });
+</script>
+</html>
